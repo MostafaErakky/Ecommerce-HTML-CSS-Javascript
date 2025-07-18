@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talaat | online store</title>
+        
+    
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/all.css">
+       
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cart">
+        <div class="top-cart">
+            <h3>cart items <span class="count-item-cart">0</span></h3>
+            <span class="close-cart" onclick="open_close_cart()"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div><!--top-cart-->
+        <div class="items-in-cart" id="cart-items">
+            <div class="item-cart">
+                <img src="img/product/10.png" alt="">
+                <div class="content">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <p class="price-cart">80$</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <span class="quantity">3</span>
+                        <button class="increase-quantity">+</button>
+
+                    </div><!--quantity controls-->
+                </div><!--content-->
+                <button class="delete-item"><i class="fa-solid fa-trash"></i></button>
+
+            </div><!--item cart-->
+         
+
+        </div><!--items in cart-->
+        <div class="bottom-cart">
+            <div class="total">
+                <p> Subtotal</p>
+                <p class="price-cart-total">0$</p>
+
+            </div><!--total-->
+            <div class="button-cart">
+                <a href="#" class="btn-cart btn">check out</a>
+                <span class="btn-cart trans-bg btn" onclick="open_close_cart()">shop more</span>
+
+            </div><!--button-cart-->
+
+        </div><!--bottom cart-->
+    </div><!--cart-->
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <a href="#" class="logo"><img src="img/white_logo.png"/></a>
+                <form action="" class="search-box">
+                    <div class="select-box">
+                         <select id="category" name="category">
+                                <option value="All categories" >All categories</option>
+                                <option value="Electronics & digita" >Electronics & digita</option>
+                                <option value="phones & taplets" >phones & taplets</option>
+                                <option value="Fashon & clothing" >Fashon & clothing</option>
+                                <option value="television & minitors" >television & minitors</option>
+                                <option value="washing and machine" >washing and machine</option>
+                        </select>
+                    </div><!--select box-->
+                    <input type="text" name="search" id="search" placeholder="search for products" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                </form><!--search box-->
+                <div class="header-icons">
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                            
+                            <span class="count count-favorite">0</span>
+                        </a>
+
+                    </div><!--icon-->
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span class="count count-item-header">0</span>
+                    </div><!--icon-->
+
+                </div> <!--header icons-->
+
+            </div> <!--container-->
+        </div>  <!-- top header-->
+        <div class="bottom-header">
+            <div class="container">
+
+                <div class="nav">
+                    <span class="open-menu " onclick="open_close_menu()"><i class="fa-solid fa-bars"></i></span>
+                    <div class="category-nav">
+                        <div onclick="open_category_nav_list()" class="category-btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div><!--category btn-->
+                        <div class="category-nav-list">
+                                <a href="#">Top 10 offers</a>
+                                <a href="#">Electronics & digita</a>
+                                <a href="#">phones & Tablets</a>
+                                <a href="#">Fashion & clothings</a>
+                                <a href="#">televisions & minitors</a>
+                                <a href="#">jewelry & watches</a>
+                                <a href="#">toys & hobbies</a>
+                        </div><!--category nav list-->
+
+                    </div><!--category nav-->
+                    <ul class="category-links">
+                        <span class="close-menu" onclick="open_close_menu()"><i class="fa-regular fa-rectangle-xmark"></i></span>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Accesorice</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">contact</a></li>
+
+
+                    </ul>
+
+                </div><!--nav-->
+                <div class="login-signup btns">
+                    <a href="#" class="btn">Login<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                    <a href="#" class="btn" >Sign up<i class="fa-solid fa-user-plus"></i></a>
+
+                </div><!--btns login and sign up-->
+            </div><!-- container-->
+        </div> <!--bottom header-->
+    </header>
+        <section class="check-out">
+            <form id="form-contact" method ="post" action="https://script.google.com/macros/s/AKfycbw7mqMfRF8Hb6xOFf63q41QGEHPoJKDgFNxJM_eyZZaEwYWucZVgWL4en1bXZOwCvuJ/exec">
+                
+                <input type="hidden" id="items" name="Items">
+                <input type="hidden" id="total-price" name="Total price">
+                <input type="hidden" id="count-items" name="Count items">
+                
+                <div class="container">
+                    <div class="order-summary" >
+                        <h1>Order Summary</h1>
+                        <div class="items" id="checkout-items">
+                            
+                           
+                            
+
+                        </div><!--items-->
+
+                        <div class="bottom-summary">
+                            <div class="shop-table">
+                                <p>Subtotal:</p>
+                                <span class="subtotal-checkout">$325.00</span>
+
+
+                            </div><!--shop-table-->
+
+                              <div class="shop-table">
+                                  <p>shipping:</p>
+                                <span class="shipping">$20</span>
+
+
+                            </div><!--shop-table-->
+                              <div class="shop-table">
+                                <p>total:</p>
+                                <span class="total-checkout">$30</span>
+
+
+                            </div><!--shop-table-->
+
+                            <div class="button-div">
+                                <button type="submit">Place Order</button>
+                            </div>
+
+                        </div><!--bottom-summary-->
+
+                    </div><!--ordersummary-->
+                    <div class="input-info">
+                        <div class="address">
+                            <h2>Delivery Address</h2>
+                            <div class="inputs">
+                                <label for="email">Email Address</label>
+                                <input type="email" placeholder="Enter Your Email" name="Email" required>
+                                    <label for="email">Name</label>
+                                <input type="text" placeholder="Enter Your name" name="Name">
+                                    <label for="email">Address</label>
+                                <input type="text" placeholder="Enter Your Address" name="Address">
+                                    <label for="email">Phone</label>
+                                <input type="number" placeholder="Enter Your phone" name="Phone" >
+
+                            </div>
+                        </div><!--address-->
+                        <div class="coupon">
+                            <h2>Coupon Code</h2>
+
+                            <div class="inputs">
+                                <label for="">Coupon Code</label>
+                                <input type="text" placeholder="Coupon Code">
+                            </div><!--inputs-->
+
+                            <div class="btn-coupon">
+                                <button>Apply Coupon</button>
+                            </div>
+                        </div><!-- coupon-->
+
+
+                    </div><!--input-info-->
+                </div><!--container-->
+            </form>
+
+        </section>
+
+   
+
+
+        <footer>
+            <div class="container">
+                <div class="big-row">
+                    <img src="img/tito2.jpg" class="logo-footer" alt="">
+                    <p>Lorem ipsum, dolor sit ametnatur delectus vel debitis?</p>
+                    <div class="icons-footer">
+                        <a href="#"><i class="fa-solid fa-phone"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                    </div><!--icon footer-->
+                </div><!--big-row-->
+
+                <div class="row">
+                    <div class="links">
+                        <h4>Find it fast</h4>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Laptops & computers </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Smart phones & tablets </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>TV & Audio </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Appliances </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>jewelry & watches </a>
+                    </div><!--links-->
+                </div><!--row-->
+                      <div class="row">
+                    <div class="links">
+                        <h4>Quick links</h4>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Laptops & computers </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Smart phones & tablets </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>TV & Audio </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Appliances </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>jewelry & watches </a>
+                    </div><!--links-->
+                </div><!--row-->
+                      <div class="row">
+                    <div class="links">
+                        <h4>Servise us</h4>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Laptops & computers </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Smart phones & tablets </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>TV & Audio </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>Appliances </a>
+                        <a href="#"><i class="fa-solid fa-caret-right"></i>jewelry & watches </a>
+                    </div><!--links-->
+                </div><!--row-->
+
+            </div><!--container-->
+
+            <div class="bottom-footer">
+                <div class="container">
+                    <p>&copy; <span>Talaat Store</span> All rights Reserved</p>
+                    <div class="payment-methods">
+                    <img src="img/payment_method.png" alt="">
+                    </div>
+                </div><!--container-->
+            </div><!--bottom footer-->
+        </footer>
+
+ <!--js file-->
+
+  
+   <!-- <script src="/js/products-home.js"></script>  -->
+    <script src="./js/main.js"></script>
+    <script src="./js/submit-checkout.js"></script>
+</body>
+</html>
